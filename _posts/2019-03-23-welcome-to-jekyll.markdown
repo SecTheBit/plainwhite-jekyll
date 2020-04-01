@@ -10,13 +10,19 @@ Active Directory is simply a Directory Service that was developed by Microsoft i
 
 ## *Components of the Active Directory*
 
-1. *Domain Controller* 
+1.*Domain Controller* 
 
 Domain Controllers are the servers for the Active Directory which do all the essentials woorks like authentication , authorization , granting tickets , etc. For example , there are more than 1000 employee in an organization , so before going into the office everyone has to show their identity to the security officer , in the same way Domain Controller acts. The DC is configured to authorized or authenticate more computers in an organization.
 
-2. *Domain*
+2.*Domain*
 
-A domain is a group of users, computers, printers, etc. in a network. Consider the below image 
+A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
+
+![alt text](!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
+
+3.*Schema*
+
+Schema is like a blue print, which describes a
 
 
 
