@@ -2,9 +2,9 @@
 layout: post
 title:  "Access Control List in Active Directory"
 date:   2020-04-01 21:03:36 +0530
-categories: Red Teaming Pentest
+categories: RedTeaming Pentest ActiveDirectory
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+Hello folks!!! hope you all are doing well , I am here to write a blog on the basis of ##Active Directory .
 
 ```javascript
 const Razorpay = require('razorpay');
