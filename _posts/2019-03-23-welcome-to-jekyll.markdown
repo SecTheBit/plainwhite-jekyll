@@ -8,14 +8,16 @@ Hello folks!!! hope you all are doing well , I am here to write a blog on the ba
 Active Directory is simply a Directory Service that was developed by Microsoft in the mid 1990s to replace the old Windows-NT style user authentication. It stores information about all the objects like computer, users, printers, shares , etc. you can think it as a phonebook for windows. It helps to manage all the objects under a domain in an efficient manner with the help of LDAP (Leight weight Directory Access Prototcol). Light Weight Directory Access Protocol is an application protocol for querying and modifying the Active Directory Services, will add more about LDAP in the next blog.
 
 
-*Components of the Active Directory*
+## *Components of the Active Directory*
 
-## 1. *Domain Controller* 
+1. *Domain Controller* 
 
 Domain Controllers are the servers for the Active Directory which do all the essentials woorks like authentication , authorization , granting tickets , etc. For example , there are more than 1000 employee in an organization , so before going into the office everyone has to show their identity to the security officer , in the same way Domain Controller acts. The DC is configured to authorized or authenticate more computers in an organization.
 
-## 2. *Domain*
-#
+2. *Domain*
+
+A domain is a group of users, computers, printers, etc. in a network. Consider the below image 
+
 
 
 ```javascript
