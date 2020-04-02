@@ -16,9 +16,9 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    twitter: Ddiwakr
-    github:  secthebit
-    linkedIn: in/divyanshu-diwakar-776ba656
+    twitter: /Ddiwakr
+    github:  /secthebit
+    linkedIn: /in/divyanshu-diwakar-776ba656
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
