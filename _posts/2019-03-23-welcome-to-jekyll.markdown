@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Access Control List in Active Directory"
+title:  "Basics of Active Directory"
 date:   2020-04-01 21:03:36 +0530
 categories: RedTeaming Pentest ActiveDirectory
 ---
