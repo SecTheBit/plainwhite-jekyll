@@ -21,35 +21,29 @@ A domain is a group of users, computers, printers, etc. in a network. Consider t
 
 ![Figure-1](!https://github.com/SecTheBit/plainwhite-jekyll/blob/gh-pages/_posts/ad_forest_img1.jpg)
 
-3.*Forest*
+3.*Distinguished Names*:
 
+Every object in the domain should be called using an unique path called as Distinguished Names. Like , in the figure 1, the Distinguished Name of the root node and a child node should be as follow:
+dc=abc dc=com ; dc=asia dc=abc dc=com; ddc stands for domain component.
+ 
+4.*Forest*
 
+Forest is a collection of domain tree , which is a collection of domains. The first domain in the forest is called as the forest root domain , in the above figure the forest root domains are "abc.com" and "xyz.com" and all the other domains are their respective child domains.
 
-4.*Schema*
+5.*Schema*
 
 Schema is like a blue print, which describes the attributes or properties of the objects in the Active Directory Environment, whenerver you make changes in the schema it is replicated to all the domain controller in the entire forest, thus you have to be very carefull, otherwise it will lead to distortion of the entire forest. It is rare that you will manually make changes to the schema , some programs that are directly integrated with the Active Directory, like Microsoft Exchange, will make changes in the Schema for you. You should be very qualified to make changes to the schema and should also be a member of Active Directory Schema Admins to make changes in the schema.
 
-4.
+6*Trust*
+
+Trust establishes a connection ,for the users, between the domains for accessing the resources present in other domains.Trust are of two types:
+
+a. Directional : The trust flows from the trusting domain to trusted domain, trusted domain should have the right to access the resource of the trusting domain. There are other two types of trust on the basis of direction:
+
+i.  One-Way Trust: Only one domain is allowed to access the resource.
+ii. Bi-Directional: Both the domains can access the resource of each other.
+
+b. Transitive: The trust relationship is extended beyond a two-domain trust to include other trusted domains. For example: if the domain "A" trust the domain "B" and the domain "B" trust the domain "C" , then in that case , domain "A" will automatically trust the domain "C".
 
 
 
-```javascript
-const Razorpay = require('razorpay');
-
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
-
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
-```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
