@@ -19,11 +19,17 @@ Domain Controllers are the servers for the Active Directory which do all the ess
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
-![Figure-1] (!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
+![Figure-1] (!https://github.com/SecTheBit/plainwhite-jekyll/blob/gh-pages/_posts/ad_forest_img1.jpg)
 
-3.*Schema*
+3.*Forest*
 
-Schema is like a blue print, which describes the attributes or properties of the objects in the Active Directory Environment
+
+
+4.*Schema*
+
+Schema is like a blue print, which describes the attributes or properties of the objects in the Active Directory Environment, whenerver you make changes in the schema it is replicated to all the domain controller in the entire forest, thus you have to be very carefull, otherwise it will lead to distortion of the entire forest. It is rare that you will manually make changes to the schema , some programs that are directly integrated with the Active Directory, like Microsoft Exchange, will make changes in the Schema for you. You should be very qualified to make changes to the schema and should also be a member of Active Directory Schema Admins to make changes in the schema.
+
+4.
 
 
 
