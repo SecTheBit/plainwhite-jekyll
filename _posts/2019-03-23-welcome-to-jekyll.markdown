@@ -19,11 +19,11 @@ Domain Controllers are the servers for the Active Directory which do all the ess
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
-(!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
+![Figure-1] (!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
 
 3.*Schema*
 
-Schema is like a blue print, which describes a
+Schema is like a blue print, which describes the attributes or properties of the objects in the Active Directory Environment
 
 
 
