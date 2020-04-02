@@ -5,6 +5,7 @@ date:   2020-04-01 21:03:36 +0530
 categories: RedTeaming Pentest ActiveDirectory
 ---
 Hello folks!!! hope you all are doing well , I am here to write a blog on the basics of *Active Directory* , and i hope you all like it. We will start with some definitions and then go to the Domain Enumeration part.
+
 Active Directory is simply a Directory Service that was developed by Microsoft in the mid 1990s to replace the old Windows-NT style user authentication. It stores information about all the objects like computer, users, printers, shares , etc. you can think it as a phonebook for windows. It helps to manage all the objects under a domain in an efficient manner with the help of LDAP (Leight weight Directory Access Prototcol). Light Weight Directory Access Protocol is an application protocol for querying and modifying the Active Directory Services, will add more about LDAP in the next blog.
 
 
@@ -18,7 +19,7 @@ Domain Controllers are the servers for the Active Directory which do all the ess
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
-![alt text](!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
+(!https://github.com/SecTheBit/plainwhite-jekyll/edit/gh-pages/_posts/ad_forest_img1)
 
 3.*Schema*
 
