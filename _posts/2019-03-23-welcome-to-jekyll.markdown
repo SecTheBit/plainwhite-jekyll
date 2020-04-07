@@ -2,7 +2,7 @@
 layout: post
 title:  "Basics of Active Directory"
 date:   2020-04-01 21:03:36 +0530
-categories: RedTeaming Pentest ActiveDirectory
+categories: ActiveDirectory
 ---
 Hello folks!!! hope you all are doing well , I am here to write a blog on the basics of *Active Directory* , and i hope you all like it. We will start with some definitions and then go to the Domain Enumeration part.
 
