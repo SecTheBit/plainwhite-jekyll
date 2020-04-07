@@ -19,7 +19,7 @@ Domain Controllers are the servers for the Active Directory which do all the ess
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
-![Figure-1] (!https://github.com/SecTheBit/plainwhite-jekyll/blob/gh-pages/assets/ad_forest_img1.jpg)
+<img src="https://github.com/SecTheBit/plainwhite-jekyll/blob/gh-pages/assets/ad_forest_img1.jpg">
 
 3.*Distinguished Names*:
 
