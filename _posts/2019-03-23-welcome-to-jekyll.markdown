@@ -11,21 +11,33 @@ Active Directory is simply a Directory Service that was developed by Microsoft i
 
 ## *Components of the Active Directory*
 
-1.*Domain Controller* 
+1.*Objects*
 
-Domain Controllers are the servers for the Active Directory which do all the essentials woorks like authentication , authorization , granting tickets , etc. For example , there are more than 1000 employee in an organization , so before going into the office everyone has to show their identity to the security officer , in the same way Domain Controller acts. The DC is configured to authorized or authenticate more computers in an organization.
+Objects are nothing but a  entity in the Active Directory , it can be anything like users, groups, or any resource which can be accessed by the users. Objects in the Active DIrectory depicts the real world entity which facilates ease in accessing the elements in the Active Directory , like Users are represented using user object in the AD , computers are represented through computer object and so on.
 
-2.*Domain*
+2.*Group*
+
+As the name suggest ,group is an object which can contain the collection of objects, users, and sometimes group also. It helps to ease the administrative work , for example , if in an organization some employee, lets say 100 , want to access a resource(like printer), so instead of assing the resource(printer) to each object(employee) , he will form a group and assigned that resource to the group.
+
+
+3.*Domain*
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/ad_forest_img1.jpg" align="middle">
 
-3.*Distinguished Names*:
+
+4.*Domain Controller* 
+
+Domain Controllers are the servers for the Active Directory which do all the essentials woorks like authentication , authorization , granting tickets , etc. For example , there are more than 1000 employee in an organization , so before going into the office everyone has to show their identity to the security officer , in the same way Domain Controller acts. The DC is configured to authorized or authenticate more computers in an organization.
+
+
+5.*Distinguished Names*:
 
 Every object in the domain should be called using an unique path called as Distinguished Names. Like , in the figure 1, the Distinguished Name of the root node and a child node should be as follow:
 dc=abc dc=com ; dc=asia dc=abc dc=com; ddc stands for domain component.
  
+
 4.*Forest*
 
 Forest is a collection of domain tree , which is a collection of domains. The first domain in the forest is called as the forest root domain , in the above figure the forest root domains are "abc.com" and "xyz.com" and all the other domains are their respective child domains.
