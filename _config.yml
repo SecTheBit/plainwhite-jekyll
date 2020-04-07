@@ -10,7 +10,10 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Divyanshu Diwakar
-  tagline: HackTheBox | PenTesting
+  tagline: | 
+         HackTheBox | PenTesting
+         OSCP | Bug Hunter
+           
   date_format: "%b %-d, %Y"
   disqus_shortname: SecTheBit
   sitemap: true # set to true to generate sitemap.xml conten
