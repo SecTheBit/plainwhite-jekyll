@@ -49,6 +49,7 @@ Trust establishes a connection ,for the users, between the domains for accessing
 a. Directional : The trust flows from the trusting domain to trusted domain, trusted domain should have the right to access the resource of the trusting domain, consider the below figure. There are other two types of trust on the basis of direction:
 
 i.  One-Way Trust: Only one domain is allowed to access the resource.
+
 ii. Bi-Directional: Both the domains can access the resource of each other.
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/trust.png" align="middle" > 
