@@ -14,6 +14,9 @@ plainwhite:
   date_format: "%b %-d, %Y"
   disqus_shortname: SecTheBit
   sitemap: true # set to true to generate sitemap.xml conten
+  navigation:
+    -title: Resume
+    -url:   "/resume"
 
   # generate social links in footer
   social_links:
