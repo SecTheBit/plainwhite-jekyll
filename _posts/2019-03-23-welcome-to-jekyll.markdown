@@ -19,25 +19,21 @@ Objects are nothing but a  entity in the Active Directory , it can be anything l
 
 As the name suggest ,group is an object which can contain the collection of objects, users, and sometimes group also. It helps to ease the administrative work , for example , if in an organization some employee, lets say 100 , want to access a resource(like printer), so instead of assing the resource(printer) to each object(employee) , he will form a group and assigned that resource to the group.
 
-
 3.*Domain*
 
 A domain is a group of users, computers, printers, etc. in a network. Consider the below domain tree (hierarchy of domains) , in this image "abc.com" is the name of the domain (please consider half left part , will explain all later) , and "asia.abc.com" and "europe.abc.com" are two child domains of the root domain ("abc.com").
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/ad_forest_img1.jpg" align="middle">
 
-
 4.*Domain Controller* 
 
 Domain Controllers are the servers for the Active Directory which do all the essentials woorks like authentication , authorization , granting tickets , etc. For example , there are more than 1000 employee in an organization , so before going into the office everyone has to show their identity to the security officer , in the same way Domain Controller acts. The DC is configured to authorized or authenticate more computers in an organization.
-
 
 5.*Distinguished Names*:
 
 Every object in the domain should be called using an unique path called as Distinguished Names. Like , in the figure 1, the Distinguished Name of the root node and a child node should be as follow:
 dc=abc dc=com ; dc=asia dc=abc dc=com; ddc stands for domain component.
  
-
 4.*Forest*
 
 Forest is a collection of domain tree , which is a collection of domains. The first domain in the forest is called as the forest root domain , in the above figure the forest root domains are "abc.com" and "xyz.com" and all the other domains are their respective child domains.
@@ -50,12 +46,19 @@ Schema is like a blue print, which describes the attributes or properties of the
 
 Trust establishes a connection ,for the users, between the domains for accessing the resources present in other domains.Trust are of two types:
 
-a. Directional : The trust flows from the trusting domain to trusted domain, trusted domain should have the right to access the resource of the trusting domain. There are other two types of trust on the basis of direction:
+a. Directional : The trust flows from the trusting domain to trusted domain, trusted domain should have the right to access the resource of the trusting domain, consider the below figure. There are other two types of trust on the basis of direction:
 
 i.  One-Way Trust: Only one domain is allowed to access the resource.
 ii. Bi-Directional: Both the domains can access the resource of each other.
 
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/trust.png" align="middle" > 
+
 b. Transitive: The trust relationship is extended beyond a two-domain trust to include other trusted domains. For example: if the domain "A" trust the domain "B" and the domain "B" trust the domain "C" , then in that case , domain "A" will automatically trust the domain "C".
 
+7.*Organizational Unit*
 
+These are the container objects which help to build the hierarchy structure of AD which encapsulates othe leaf objects like users, computers, etc. For example , in an organization there may be many other departments like IT department, Development department etc. So we can create an Organizational Unit for each of these departments for efficient administration . These separate OUs will contains users, computers, printers, etc. of these departments.
 
+Thats all for the basic theory part , will cover the Domain Enumeration part in the next blog !!!
+
+                                        Happy Hacking
