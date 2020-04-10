@@ -28,7 +28,7 @@ username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 
 *PAC or Privilege Attribute CAertificate , is an extension to the Kerberos ticket that contain the privilege of the user. When users use their Kerberos tickets to authenticate to other systems, the PAC can be read and used to determine their level of privileges without reaching out to the domain controller to query for that information . For more info on PAC click on th following link.*
 
-[https://blog.stealthbits.com/what-is-the-kerberos-pac/]
+(https://blog.stealthbits.com/what-is-the-kerberos-pac/)
 
 
 ## Keys used in Kerberos:
@@ -38,4 +38,5 @@ username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 3. Session Key: It is the key which is provided when the client is interacting eith the KDC.
 4. Service Session Key: It is the key provided when the client is interacting with the service account server.
 5. Krbtgt Key: It is the ntlm hash of the *krbtgt account*.
+
 
