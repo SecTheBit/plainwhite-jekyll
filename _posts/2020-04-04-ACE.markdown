@@ -7,13 +7,13 @@ categories: ActiveDirectory
 
 Hello folks!!! In this series of Active Directory , I am back with a new blog regarding kerberoes authentication and attacks. We will start with some basics of kerberos and then move to the attacking part. If you have any doubts regarding any topic or if you think that the topics are not well explained , feel free to contact me.
 
-### What is Kerberos
+## What is Kerberos
 
 Kerberos is named after a famous three headed gaurd dogs in the Greek methodology. Basically it is Authentication Protocol for the windows operating system , developed by the Massachusetts Institue of Technology for a project called Athena. Kerberos is not a Authorization protocol, it only verifies the identity of the the users , it does not tell what resources a user can access. 
 
-# Some of the Agents involve in Kerberos:
+## Some of the Agents involve in Kerberos:
 
-1. *Server* : The server which the user wants to access for the serviceor resource.
+1. *Server* : The server which the user wants to access for the service or resource.
 
 2. *Client* : The server which acts on behalf of the user for accessing the resource from the server.
 
@@ -21,11 +21,23 @@ Kerberos is named after a famous three headed gaurd dogs in the Greek methodolog
 
 The Key Distribution centre or KDC is a truted authority in Active Directory which is responsible for providing the service to the users by providing them tickets and session keys , and is installed on every Domain Cotroller.
 
-# Tickets Provided by KDC:
+## Tickets Provided by KDC:
 
 1. TGTs : Ticket granting Tickets are the tickets being deliverd by the KDC , on the request of user for the *TGTs*.It includes username, Session Key, Expiration Date and *PAC* with user privileges.
 
 2. TGS : Ticket Granting Service is the tickets which users uses for the taking the service from any service account. It includes 
 username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 
-# Keys used in Kerberos:
+*PAC or Privilege Attribute CAertificate , is an extension to the Kerberos ticket that contain the privilege of the user. When users use their Kerberos tickets to authenticate to other systems, the PAC can be read and used to determine their level of privileges without reaching out to the domain controller to query for that information . For more info on PAC click on th following link.*
+
+[https://blog.stealthbits.com/what-is-the-kerberos-pac/]
+
+
+## Keys used in Kerberos:
+
+1. User Key: It is the ntlm hash of the user which want to access the service.
+2. Service Key: It is the nlm hash of the service account.
+3. Session Key: It is the key which is provided when the client is interacting eith the KDC.
+4. Service Session Key: It is the key provided when the client is interacting with the service account server.
+5. Krbtgt Key: It is the ntlm hash of the *krbtgt account*.
+
