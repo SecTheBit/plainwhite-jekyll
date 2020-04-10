@@ -7,11 +7,11 @@ categories: ActiveDirectory
 
 Hello folks!!! In this series of Active Directory , I am back with a new blog regarding kerberoes authentication and attacks. We will start with some basics of kerberos and then move to the attacking part. If you have any doubts regarding any topic or if you think that the topics are not well explained , feel free to contact me.
 
-# What is Kerberos
+### What is Kerberos
 
 Kerberos is named after a famous three headed gaurd dogs in the Greek methodology. Basically it is Authentication Protocol for the windows operating system , developed by the Massachusetts Institue of Technology for a project called Athena. Kerberos is not a Authorization protocol, it only verifies the identity of the the users , it does not tell what resources a user can access. 
 
-# some of the Agents involve in Kerberos:
+# Some of the Agents involve in Kerberos:
 
 1. *Server* : The server which the user wants to access for the serviceor resource.
 
