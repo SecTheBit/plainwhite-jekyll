@@ -17,9 +17,7 @@ Kerberos is named after a famous three headed gaurd dogs in the Greek methodolog
 
 2. *Client* : The server which acts on behalf of the user for accessing the resource from the server.
 
-3. *Key Distribution Centre*
-
-The Key Distribution centre or KDC is a truted authority in Active Directory which is responsible for providing the service to the users by providing them tickets and session keys , and is installed on every Domain Cotroller.
+3. *Key Distribution Centre* : The Key Distribution centre or KDC is a truted authority in Active Directory which is responsible for providing the service to the users by providing them tickets and session keys , and is installed on every Domain Cotroller.
 
 ## Tickets Provided by KDC:
 
