@@ -67,7 +67,6 @@ In this attack basically we do bruteforce attack against the kerberos protocol, 
 
 In the first step of authentication, we have seen that after doing the pre-authentication, KDC will reply for the TGT. But sometimes the *DONT_REQ_PREAUTH* flag is set in some users , so that the KDC do not check for users password and will reply to any of the request for TGT. So in that case we can request for TGT with a set of usernames and if by chance any user have that flag set then the KDC will reply with the TGT, AS_REP, which will contain the user hash. YOu only need connectivity with the KDC , no need of extra privileges are required.
 
-3. 
 
 
 
