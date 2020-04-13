@@ -42,17 +42,29 @@ username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 
 ## Authentication Process 
 
-The kerberos Authentication consist of five steps, condsider the following diagram.
+The kerberos Authentication consist of five steps, consider the following diagram.
+
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture.JPG" align="middle>
 
 1. KRB_AS_REQ : In this step the client request for the TGT from the key distribution centre. IN this process , the ntlm hash of the user with a timestamp is being sent to the KDC for the pre-authentication purpose.
 
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture1.JPG" align="middle>
+
 2. KRB_AS_REP : IN this step , first KDC verifies the identity of the user with the given hash and timestamp , and then it reply with the TGT to the user. 
+
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture2.JPG" align="middle>
 
 3. KRB_TGS_REQ : In this step , the client after getting the TGT , request for the TGS . In this process . the timestamp and TGT are being provided to the KDC.
 
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture3.JPG" align="middle>
+
 4. KRB_TGS_REP : The KDC will reply with the TGS , after getting the request for it.
 
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture4.JPG" align="middle>
+
 5. KRB_AP_REQ  : IN the last step, the client will access the service from the application server with the help of TGS.
+
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture5.JPG" align="middle>
 
 This is the whole authentication process involved in kerberos. Much for the theory part, now we will move to the attacking part.
 
@@ -62,11 +74,14 @@ This is the whole authentication process involved in kerberos. Much for the theo
 
 In this attack basically we do bruteforce attack against the kerberos protocol, in order to get the usernames and passwords of the users. You only need connectivity with the DC, no user level pivileges are required for this. HOwever this attack can led to blocking of the users, so you need to be carefull while performing this attack.
 
-
 2. AS_REPRoast:
 
 In the first step of authentication, we have seen that after doing the pre-authentication, KDC will reply for the TGT. But sometimes the *DONT_REQ_PREAUTH* flag is set in some users , so that the KDC do not check for users password and will reply to any of the request for TGT. So in that case we can request for TGT with a set of usernames and if by chance any user have that flag set then the KDC will reply with the TGT, AS_REP, which will contain the user hash. YOu only need connectivity with the KDC , no need of extra privileges are required.
 
+3. Kerberoasting:
 
+In step four , we have seen that the client will request for the TGS in order to get access to the service account. The main goal of the kerberoasting is to get the TGS on behalf of any user so that the attacker can get the ntlm hash of the service account. You need a user level access which can request for TGS for kerberoasting to take place.
+
+4. Golden Ticket Attack:
 
 
