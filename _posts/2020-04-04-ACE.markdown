@@ -26,9 +26,7 @@ Kerberos is named after a famous three headed gaurd dogs in the Greek methodolog
 2. TGS : Ticket Granting Service is the tickets which users uses for the taking the service from any service account. It includes 
 username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 
-*PAC or Privilege Attribute CAertificate , is an extension to the Kerberos ticket that contain the privilege of the user. When users use their Kerberos tickets to authenticate to other systems, the PAC can be read and used to determine their level of privileges without reaching out to the domain controller to query for that information . For more info on PAC click on th following link.*
-
-(https://blog.stealthbits.com/what-is-the-kerberos-pac/)
+*PAC or Privilege Attribute CAertificate , is an extension to the Kerberos ticket that contain the privilege of the user. When users use their Kerberos tickets to authenticate to other systems, the PAC can be read and used to determine their level of privileges without reaching out to the domain controller to query for that information.*
 
 
 ## Keys used in Kerberos:
@@ -44,27 +42,27 @@ username, Session key, Expiration Date of the TGS and *PAC*, signed by KDC.
 
 The kerberos Authentication consist of five steps, consider the following diagram.
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture.JPG" align="middle">
 
 1. KRB_AS_REQ : In this step the client request for the TGT from the key distribution centre. IN this process , the ntlm hash of the user with a timestamp is being sent to the KDC for the pre-authentication purpose.
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture1.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture1.JPG" align="middle">
 
 2. KRB_AS_REP : IN this step , first KDC verifies the identity of the user with the given hash and timestamp , and then it reply with the TGT to the user. 
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture2.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture2.JPG" align="middle">
 
 3. KRB_TGS_REQ : In this step , the client after getting the TGT , request for the TGS . In this process . the timestamp and TGT are being provided to the KDC.
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture3.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture3.JPG" align="middle">
 
 4. KRB_TGS_REP : The KDC will reply with the TGS , after getting the request for it.
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture4.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture4.JPG" align="middle">
 
 5. KRB_AP_REQ  : IN the last step, the client will access the service from the application server with the help of TGS.
 
-<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture5.JPG" align="middle>
+<img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/Capture5.JPG" align="middle">
 
 This is the whole authentication process involved in kerberos. Much for the theory part, now we will move to the attacking part.
 
@@ -82,6 +80,6 @@ In the first step of authentication, we have seen that after doing the pre-authe
 
 In step four , we have seen that the client will request for the TGS in order to get access to the service account. The main goal of the kerberoasting is to get the TGS on behalf of any user so that the attacker can get the ntlm hash of the service account. You need a user level access which can request for TGS for kerberoasting to take place.
 
-4. Golden Ticket Attack:
+
 
 
