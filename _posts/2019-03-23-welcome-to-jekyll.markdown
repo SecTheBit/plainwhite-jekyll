@@ -4,11 +4,11 @@ title:  "Basics of Active Directory"
 date:   2020-04-01 21:03:36 +0530
 categories: ActiveDirectory
 ---
+<font size="88">
 Hello folks!!! hope you all are doing well , I am here to write a blog on the basics of *Active Directory* , and i hope you all like it. We will start with some definitions and then go to the Domain Enumeration part.
 
 Active Directory is simply a Directory Service that was developed by Microsoft in the mid 1990s to replace the old Windows-NT style user authentication. It stores information about all the objects like computer, users, printers, shares , etc. you can think it as a phonebook for windows. It helps to manage all the objects under a domain in an efficient manner with the help of LDAP (Leight weight Directory Access Prototcol). Light Weight Directory Access Protocol is an application protocol for querying and modifying the Active Directory Services, will add more about LDAP in the next blog.
-
-
+</font>
 ## *Components of the Active Directory*
 
 1.*Objects*
