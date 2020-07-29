@@ -1,1 +1,13 @@
+---
+layout: post
+title:  " Phishing via HTA File"
+date:   2020-07-30 21:03:36 +0530
+categories: RedTeaming
+---
+
+Hello folks!!! In this blog , I would show you how I have done Phishing via HTA (HTML Application ) file when i got access to the email of one of their employee during a pentest.
+
+## Introduction To HTA File
+
+HTA files are the HTML Application , which can execute the contents without browser sanbox restriction, and executed by default by a Microsoft Signed Binary , called as mshta.exe. With some Obfuscation , HTA files can really help to bypass the AV and Defender , because these files have not been fully identified. Other files like exe, have an higher chance of being detected.
 
