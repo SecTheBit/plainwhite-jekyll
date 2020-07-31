@@ -17,6 +17,6 @@ Now I have to create an Undetectable HTA file and for this purpose I choose a to
 
 
 
-Now we decided to send it to some selected group of employess at a time, so that no one can doubt on the integrity of the mail. After waiting for some time we see that our file is being fetched from one of the ips, and then at last we got our shell.
+Now we decided to send it to some selected group of employess at a time, so that no one can doubt on the integrity of the mail. After waiting for some time we see that our file is being fetched from one of the ips, and then at last we got our shell. After gaining the shell , we do some lateral movement and gained another user on this domain, will talk about laterl movement and persistence in the next blog. 
 
 
