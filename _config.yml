@@ -1,7 +1,7 @@
 title: SecTheBit
 author: Divyanshu Diwakar
 email: diwakar.divyanshu.23@gmail.com
-description: > #"I am Pentester , working on Active Directory stuffs and open for any oppurtunities in cybersec"
+description: > #"I am working as a Security Analayst ,Currently working on Active Directory stuffs and open for any oppurtunities in cybersec"
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -11,9 +11,9 @@ sass:
 plainwhite:
   name: Divyanshu Diwakar
   tagline: | 
-         HackTheBox | PenTesting
-         OSCP | Bug Hunter
-           
+         OSCP|RedTeamer
+         Security Analyst
+         ChapterLead @NUll Bhopal 
   date_format: "%b %-d, %Y"
   disqus_shortname: SecTheBit
   sitemap: true # set to true to generate sitemap.xml conten
