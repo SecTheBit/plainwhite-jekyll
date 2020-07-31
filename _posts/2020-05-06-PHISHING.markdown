@@ -9,5 +9,14 @@ Hello folks!!! In this blog , I would show you how I have done Phishing via HTA 
 
 ## Introduction To HTA File
 
-HTA files are the HTML Application , which can execute the contents without browser sanbox restriction, and executed by default by a Microsoft Signed Binary , called as mshta.exe. With some Obfuscation , HTA files can really help to bypass the AV and Defender , because these files have not been fully identified. Other files like exe, have an higher chance of being detected.
+HTA files are the HTML Application , which can execute the contents without browser sanbox restriction, and executed by default by a Microsoft Signed Binary , called as mshta.exe. HTA files can really help to bypass the AV and Defender , because these files have not been fully identified, although this can also be detected if some proper obfuscation is not done. Other files like exe, have an higher chance of being detected.
+
+## Phishing
+
+Now I have to create an Undetectable HTA file and for this purpose I choose a tool called 'weirdhta'. So, I created a file and hosted it on my  server. The second major problem in phishing is your mail body content. The context should be matching with the job profile-id you got access to  and it should be realistic.In my case , i got an access to a Finance Manager Account, so i wrote the mail body related to some finance help for the needy one!!
+
+
+
+Now we decided to send it to some selected group of employess at a time, so that no one can doubt on the integrity of the mail. After waiting for some time we see that our file is being fetched from one of the ips, and then at last we got our shell.
+
 
