@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DOM"
+title:  "DOMs"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
@@ -93,7 +93,7 @@ We observe that our term 'domxss' is appearing in the <img> tag .
 It was appearing there in the <img> tag due to the "trackSearch()" function. It is taking input from the source and writing it to the DOM without proper sanitization.
 
 So first we need to come out of the <img> tag by using inverted commas , and then give a simple payload.
-So our payload becomes "><script>alert(1)</script>
+So our payload becomes 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1_1.png" align="middle">
 
