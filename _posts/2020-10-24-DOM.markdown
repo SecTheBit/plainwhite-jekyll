@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DOM XS"
+title:  "OM XSS"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
@@ -49,7 +49,7 @@ In the following HTML page, in the script section, the location.hash.substr() ar
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/temp5.png" align="middle">
 This was all about sources and sinks.
 
-## *DOM XSS*
+## DOM XSS
 
 DOM XSS occurs when the web application takes the input from the source and mihshandles it in a way which causes it execution in the sink without proper sanitization, or in simple words we can say that web application writes the data to the dom without proper sanitization.
 
@@ -58,7 +58,7 @@ Generally in DOM XSS , you need to set your payload according to the DOM  , no n
 
 Now we will do some execercises on portswigger labs and i have also made couple of challenges, you can easily found it in my github repository.  
 
-## *Challenge-1*
+## Challenge-1
 
 In the following challenge i have created a simple web page , and have uses the location.hash as source and window.location as sink.
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/temp6" align="middle">
@@ -68,7 +68,7 @@ So whatever we write after the hash part , our new location will be set to that 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/dom_xss.png" align="middle">
 
 
-## *Challenge-2*
+## Challenge-2
 
 In the following challenge , i have used a vulnerable function "eval()" in the script section. 
 
@@ -82,7 +82,7 @@ So just giving our payload will do the work here.
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge2.png" align="middle">
 
 
-## *Challenge-3*
+## Challenge-3
 
 This challenge is on the portswigger labs.
 On opening the web application , a search bar appears. So we will give it some input and see where our term is reflection in the DOM.
@@ -93,18 +93,18 @@ We observe that our term 'domxss' is appearing in the <img> tag .
 It was appearing there in the <img> tag due to the "trackSearch()" function. It is taking input from the source and writing it to the DOM without proper sanitization.
 
 So first we need to come out of the <img> tag by using inverted commas , and then give a simple payload.
-So our payload becomes 
+So our payload becomes "><script>alert(1)</script>
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1_1.png" align="middle">
 
-## *Challenge-4*
+## Challenge-4
 
 In this challenge , on going to any product details we observe that in the dom , there is another parameter named as "storedId".
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/temp.png" align="middle">
 
 And also this parameter is going from location.search source to document.write sink without sanitization. So , first we need to find where the parameter "storeId" is reflecting in the DOM and then crafting our payload according to that.
-We observe that the parameter is appearing in the <search> tag. So our final payload will look like this: </select><script>alert(1)</script>
+We observe that the parameter is appearing in the <search> tag. So our final payload will look like this: 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge2_2.png" align="middle">
 
