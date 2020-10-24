@@ -104,7 +104,7 @@ In this challenge , on going to any product details we observe that in the dom ,
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/temp.png" align="middle">
 
 And also this parameter is going from location.search source to document.write sink without sanitization. So , first we need to find where the parameter "storeId" is reflecting in the DOM and then crafting our payload according to that.
-We observe that the parameter is appearing in the <search> tag. So our final payload will look like this:
+We observe that the parameter is appearing in the <search> tag. So our final payload will look like this: </select><script>alert(1)</script>
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge2_2.png" align="middle">
 
