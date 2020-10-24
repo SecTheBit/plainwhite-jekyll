@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "XSS"
+title:  "SS"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
@@ -94,7 +94,7 @@ It was appearing there in the <img> tag due to the "trackSearch()" function. It 
 
 So first we need to come out of the <img> tag by using inverted commas , and then give a simple payload.
 So our payload becomes 
-
+<img src=1 onerror=alert(1)>
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1_1.png" align="middle">
 
 ## Challenge-4
