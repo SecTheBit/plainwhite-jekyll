@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " XSS"
+title:  "XSS"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
