@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DOM XSS"
+title:  "DOM XS"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
@@ -115,7 +115,7 @@ In this challenge , on visitng the web page and obersving the DOM, we see that t
 
 But here , we can not use our simple <script> tag , because when they are being used with inner.html they are easily blocked by modern browsers. So we need to use some othe tag like <img> here.
 So our payload becomes:
-<img src=1 onerror=alert(1)>
+
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge_3.png" align="middle">
 
