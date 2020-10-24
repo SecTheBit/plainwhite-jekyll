@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "DOM XSS"
+title:  "DOM XS"
 date:   2020-10-24 21:03:36 +0530
 categories: WebPentesting
 ---
 Hello folks!!! hope you all are doing well , I am here to write a blog on DOM XSS , and i hope you all like it. We will start with understanding what is DOM , source and sinks and then move to the XSS part with some demonstration.
 
 
-## *What is DOM*
+## What is DOM
 
 Before Going to Dom xss we should understand what is DOM. Google Definition of DOM is:
 
@@ -18,7 +18,7 @@ The following picture represents the basic structure tree of an html document or
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/dom.png" align="middle">
 
-## *Difference between DOM and view-source*
+## Difference between DOM and view-source
 
 When i was learning about DOM xss , i got confused about the DOM and view-source of a page. I will explain the difference between them with an example.
 
@@ -42,6 +42,8 @@ I think that clears all about the DOM and how it differs from the view-source.
 Now other concepts are sources and sinks, these two are important before understanding about the DOM xss. 
 
 Sources are basically the origin of the untrusted data which are given by the users. Some of the sources are location.hash, location.href,etc, and Sinks are the executable function where the data from the source are being executed.
+
+
 In the following HTML page, in the script section, the location.hash.substr() are acting as the source and document.write is acting as the sinks.So whatever we write after hash ("#") part in the url , it will get stored in the variable x and get executed by the sink document.write and will be written on the html page after clicking on the button.
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/temp5.png" align="middle">
@@ -50,6 +52,8 @@ This was all about sources and sinks.
 ## *DOM XSS*
 
 DOM XSS occurs when the web application takes the input from the source and mihshandles it in a way which causes it execution in the sink without proper sanitization, or in simple words we can say that web application writes the data to the dom without proper sanitization.
+
+
 Generally in DOM XSS , you need to set your payload according to the DOM  , no need of source code here.
 
 Now we will do some execercises on portswigger labs and i have also made couple of challenges, you can easily found it in my github repository.  
@@ -89,7 +93,7 @@ We observe that our term 'domxss' is appearing in the <img> tag .
 It was appearing there in the <img> tag due to the "trackSearch()" function. It is taking input from the source and writing it to the DOM without proper sanitization.
 
 So first we need to come out of the <img> tag by using inverted commas , and then give a simple payload.
-So our payload becomes "><script>alert(1)</script>
+So our payload becomes 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1_1.png" align="middle">
 
