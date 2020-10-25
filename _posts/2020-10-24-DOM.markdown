@@ -102,7 +102,7 @@ It was appearing there in the <img> tag due to the "trackSearch()" function. It 
 
 
 So first we need to come out of the <img> tag by using inverted commas , and then give a simple payload.
-So our payload becomes "><script>alert(1)</script>
+So our payload becomes "><script>alert('XSS_BY_DIVYANSHU_DIWAKAR')</script>
 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1_1.png" align="middle">
