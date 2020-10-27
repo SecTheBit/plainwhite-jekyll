@@ -98,7 +98,7 @@ We observe that our term 'domxss' is appearing in the "img" tag .
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge1.png" align="middle">
 
 
-It was appearing there in the <img> tag due to the "trackSearch()" function. It is taking input from the source and writing it to the DOM without proper sanitization.
+It was appearing there in the "img" tag due to the "trackSearch()" function. It is taking input from the source and writing it to the DOM without proper sanitization.
 
 
 So first we need to come out of the "img" tag by using inverted commas , and then give a simple payload.
@@ -115,8 +115,7 @@ In this challenge , on going to any product details we observe that in the dom ,
 
 And also this parameter is going from location.search source to document.write sink without sanitization.
 So , first we need to find where the parameter "storeId" is reflecting in the DOM and then crafting our payload according to that.
-We observe that the parameter is appearing in the "search" tag. 
-
+We observe that the parameter is appearing in the "select" tag.So first we need to come out of the "select" tag, and then writing our sinple payload after it. 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge_2_2.png" align="middle">
 
@@ -127,7 +126,7 @@ We observe that the parameter is appearing in the "search" tag.
 In this challenge , on visitng the web page and obersving the DOM, we see that the "search" parameter is used in conjuction with inner.html
 
 
-But here , we can not use our simple <script> tag , because when they are being used with inner.html they are easily blocked by modern browsers. So we need to use some othe tag like "img" here.
+But here , we can not use our simple "script" tag , because when they are being used with inner.html they are easily blocked by modern browsers. So we need to use some othe tag like "img" here.
 
 
 <img src="https://raw.githubusercontent.com/SecTheBit/plainwhite-jekyll/gh-pages/assets/challenge_3.png" align="middle">
